@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(131, 191, 243); 
+}
+
+#end-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game-Score {
+    color: rgb(12, 109, 148);
+}
+
+button {
+    border-radius: 5%;
+    border-color: rgb(21, 158, 192); 
+    background-color: aliceblue;
+    width: 20vw;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: rgb(12, 109, 148);
+    color: white;
+    transform: scale(1.05);
+}
