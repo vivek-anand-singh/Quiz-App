@@ -62,10 +62,12 @@ function updateColors(ansIdx) {
         if (currentQuestion.answer === ansIdx) {
             document.getElementById(ansIdx.toString()).style.backgroundColor = "green";
             totalScore+=10;
+            localStorage.setItem('score',totalScore);
         } else {
             document.getElementById(ansIdx.toString()).style.backgroundColor = "red";
             document.getElementById(currentQuestion.answer.toString()).style.backgroundColor = "green";
         }
+        
         document.getElementById("total").innerHTML=totalScore;
         clicked=true;
     }
@@ -97,6 +99,9 @@ function updateProgressBar() {
     const progressPercentage = ((visited-1) / totalQues) * 100;
     progressBar.style.width = progressPercentage + "%";
 }
-document.getElementById("total").innerHTML=totalScore;
+
+
 
 generateQuestion();
+
+
